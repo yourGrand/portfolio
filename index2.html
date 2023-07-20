@@ -4,31 +4,41 @@
     <title>Artem Vakhutinskiy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="default2.css">
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    <script src="js.js"></script>
 </head>
 
 <body>
-    <section class="s1">
-        <div class="shadow">
-            <div class="main-container">
-                <div class="greeting-wrapper">
-                    <h1 class="greeting">Hi, I'm Artem Vakhutinskiy</h1>
-                </div>
+    <header>
+        <div class="nav-wrapper">
+            <nav class="closed-menu">
+                <a class="logo" href="index2.html">Artem Vakh.</a>
+                <a href="#section-two">About</a>
+                <a href="#section-three">Portfolio</a>
+                <a href="#section-four">Contact</a>
+                <a class="toggleBox" onclick="menu()">
+                    <img class="menu" src="images/bars.png" alt="menu bars">
+                </a>
+            </nav>
+        </div>
+    </header>
 
-                <div class="nav-wrapper">
-                    <nav>
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Portfolio</a>
-                        <a href="">Contact</a>
-                    </nav>
+    <section class="section1" id="section-one">
+        <div class="section1-darkness">
+            <div class="shadow">
+                <div class="main-container">
+                    <div class="greeting-wrapper">
+                        <div class="greeting">
+                            <h1>Hi, I'm Artem Vakhutinskiy</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="s2">
+    <section class="section2" id="section-two">
         <div class="shadow">
             <div class="main-container">
                 <div class="about-wrapper">
@@ -42,7 +52,7 @@
         </div>
     </section>
 
-    <section class="s3">
+    <section class="section1" id="section-three">
         <div class="shadow">
             <div class="main-container">
                 <div class="portfolio-wrapper">
@@ -52,7 +62,7 @@
         </div>
     </section>
 
-    <section class="s4">
+    <section class="section2" id="section-four">
         <div class="shadow">
             <div class="main-container">
                 <div class="contactme-wrapper">
