@@ -12,14 +12,21 @@
 <body>
     <header>
         <div class="nav-wrapper">
-            <nav class="closed-menu">
-                <a class="logo" href="index.html">Artem Vakh.</a>
-                <a class="menu-link" href="#section-two">About</a>
-                <a class="menu-link" href="#section-three">Portfolio</a>
-                <a class="menu-link" href="#section-four">Contact</a>
-                <a class="toggleBox" onclick="menu()">
-                    <img class="menu" src="assets/images/bars.png" alt="menu bars">
-                </a>
+            <a class="logo" href="index.html">Artem Vakh.</a>
+            <nav id="navbar" class="navigation" role="navigation">
+
+                <input id="toggle" type="checkbox" />
+                <label class="hamburger" for="toggle">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                </label>
+              
+                <nav class="menu">
+                    <a class="menu-link" href="#section-two" onclick="closeNav()">About</a>
+                    <a class="menu-link" href="#section-three" onclick="closeNav()">Portfolio</a>
+                    <a class="menu-link" href="#section-four" onclick="closeNav()">Contact</a>
+                </nav>
             </nav>
         </div>
     </header>
