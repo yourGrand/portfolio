@@ -5,6 +5,9 @@
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: SF Pro Display, sans-serif;
 }
 
 :root {
@@ -17,13 +20,8 @@
     --white: #ffff;
 }
 
-html, body {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-    background-color: var(--white);
-	font-family: SF Pro Display, sans-serif;
+body {
+	background-color: var(--white);
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -82,7 +80,7 @@ article p {
 }
 
 .section2 {
-	background-color: white;
+	background-color: var(--white);
 }
 
 .main-container {
@@ -94,7 +92,7 @@ article p {
 
 header {
     background: var(--white);
-    padding: 20px;
+    height: 76.5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,6 +119,11 @@ nav a {
 }*/
 
 .nav-wrapper {
+	padding: 20px;
+	background-color: var(--white);
+	box-shadow: 0 5px 15px 0 var(--shadowColour3);
+	position: fixed;
+	top: 0;
     width: 100%;
 }
 
@@ -155,6 +158,12 @@ nav a {
     text-align: left;
 }
 
+.menu-link {
+	padding-top: 20px;
+	font-size: 25px;
+	color: var(--textColour);
+}
+
 .logo {
     color: var(--textColour);
     font-size: 30px;
@@ -177,7 +186,7 @@ nav a {
 }
 
 .greeting {
-	background-color: white;
+	background-color: var(--white);
 	border-radius: 50px;
 	box-shadow: 0 5px 20px 0 var(--shadowColour3);
 	margin: 40px auto 40px auto;
