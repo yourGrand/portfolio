@@ -90,14 +90,21 @@ section {
 	background-color: var(--white);
 }
 
+#section-one {
+	background: url('assets/images/version3.jpg') center/cover no-repeat;
+}
+
 #section-one .shadow {
 	display: grid;
 	align-content: center;
-	background: url('assets/images/version6-1.svg') center/cover no-repeat;
 }
 
 #section-three {
-	background: url('assets/images/version6-2.svg') center/cover no-repeat;
+	background: url('assets/images/version8.jpg') center/cover no-repeat;
+}
+
+#section-five{
+	background: url('assets/images/version4.jpg') bottom/cover no-repeat;
 }
 
 /* Navigation Bar */
