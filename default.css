@@ -71,7 +71,7 @@ section {
 
 .shadow {
 	box-shadow: 0 5px 15px 0 var(--shadowColour2);
-	height: calc(100dvh - var(--navbarHeight));
+	height: calc(100vh - var(--navbarHeight));
 }
 
 .section-bubbles {
