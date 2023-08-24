@@ -145,6 +145,10 @@ nav a {
 
 }*/
 
+header {
+	position: relative;
+}
+
 .nav-wrapper {
 	padding: 10px 25px;
 	background-color: var(--white);
@@ -153,6 +157,7 @@ nav a {
 	display: block;
 	top: 0;
     width: 100%;
+	z-index: 1000;
 }
 
 .logo-hamburger {
@@ -341,10 +346,14 @@ nav a {
 	margin: 0 auto;
 }
 
+.slider-container {
+	position: relative;
+	overflow: visible;
+}
+
 .portfolio-wrapper {
 	display: flex;	
 	align-content: center;
-	min-height: 10em;
 }
 
 .portfolio-title {
@@ -360,16 +369,77 @@ nav a {
 	font-weight: 600;
 }
 
+.slider-container i {
+	top: 50%;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	font-size: 1.25rem;
+	position: absolute;
+	text-align: center;
+	line-height: 50px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 5px 20px 0 var(--shadowColour3);
+	transform: translateY(-50%);
+	transition: transform 0.1s linear;
+}
+
+.slider-container i:active{
+	transform: translateY(-50%) scale(0.85);
+}
+
+.slider-container i:first-child{
+	left: -22px;
+}
+
+.slider-container i:last-child{
+	right: -22px;
+}
+
+.slider-container .carousel{
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 100%;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	gap: 30px;
+	border-radius: 50px;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.carousel.no-transition {
+	scroll-behavior: auto;
+}
+
+.carousel.dragging {
+	scroll-snap-type: none;
+	scroll-behavior: auto;
+}
+
+.carousel.dragging .portfolio-item {
+	cursor: grab;
+	user-select: none;
+}
+
+.carousel .portfolio-item {
+	scroll-snap-align: start;
+	list-style: none;
+	cursor: pointer;
+	flex-direction: column;
+}
+
 .portfolio-item {
 	background-color: var(--white);
 	border-radius: 50px;
-	box-shadow: 0 5px 20px 0 var(--shadowColour3);
-	margin: 0px 30px 40px auto;
 	padding: 40px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 	justify-content: center;
-	min-width: 100%;
 }
 
 .portfolio-item h3 {
