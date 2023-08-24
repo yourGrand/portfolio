@@ -94,7 +94,7 @@ section {
 }
 
 #section-one {
-	background: url('assets/images/version3.jpg') center/cover no-repeat;
+	background: url('/assets/images/version3.jpg') center/cover no-repeat;
 }
 
 #section-one .shadow {
@@ -107,12 +107,12 @@ section {
 }
 
 #section-three {
-	background: url('assets/images/version8.jpg') center/cover no-repeat;
+	background: url('/assets/images/version8.jpg') center/cover no-repeat;
 	overflow: hidden;
 }
 
 #section-five{
-	background: url('assets/images/version4.jpg') bottom/cover no-repeat;
+	background: url('/assets/images/version4.jpg') bottom/cover no-repeat;
 }
 
 /* Navigation Bar */
@@ -346,11 +346,6 @@ header {
 	margin: 0 auto;
 }
 
-.slider-container {
-	position: relative;
-	overflow: visible;
-}
-
 .portfolio-wrapper {
 	display: flex;	
 	align-content: center;
@@ -369,7 +364,7 @@ header {
 	font-weight: 600;
 }
 
-.slider-container i {
+/*.slider-container i {
 	top: 50%;
 	height: 50px;
 	width: 50px;
@@ -432,7 +427,7 @@ header {
 	list-style: none;
 	cursor: pointer;
 	flex-direction: column;
-}
+}*/
 
 .portfolio-item {
 	background-color: var(--white);

@@ -4,13 +4,22 @@
     <title>Artem Vakhutinskiy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
 
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <!--Style and JS-->
+    <link rel="stylesheet" type="text/css" href="assets/style/main.css">
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    <script src="assets/js/script.js"></script>
+
+    <!--SwiperJS-->
+    <link rel="stylesheet" type="text/css" href="assets/style/swiper-bundle.css"/>
+    <script src="assets/js/swiper-bundle.js"></script>
+
+    <!--Font Awsome-->
     <script src="https://kit.fontawesome.com/c8d738133f.js" crossorigin="anonymous"></script>
-    <script src="js.js"></script>
 </head>
 
 <body>
+
+    <!--Navigation-->
     <header>
         <div class="nav-wrapper">
             <div class="logo-hamburger">
@@ -31,6 +40,7 @@
         </div>
     </header>
 
+    <!--Greeting-->
     <section id="section-one">
         <div class="section-darkness">
             <div class="shadow">
@@ -45,6 +55,7 @@
         </div>
     </section>
 
+    <!--About-->
     <section class="section" id="section-two">
         <div class="shadow">
             <div class="about-container">
@@ -63,9 +74,12 @@
         </div>
     </section>
 
+    <!--Portfolio-->
     <section id="section-three"> 
         <div class="section-darkness"> 
-            <div class="shadow"> 
+            <div class="shadow">
+
+                <!--Title-->
                 <div class="portfolio-container"> 
                     <div class="portfolio-wrapper"> 
                         <div class="portfolio-title">
@@ -74,10 +88,10 @@
                     </div>
                 </div>
 
-                <div class="portfolio-container slider-container">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <ul class="carousel">
-                        <li class="portfolio-item">
+                <!--Swiper-->
+                <div class="portfolio-container swiper">
+                    <div class="swiper-wrapper">
+                        <div class="portfolio-item swiper-slide">
                             <img src="assets/images/github-mark.png">
                             <article>
                                 <h3>Instagram Business Post Scraper</h3>
@@ -92,9 +106,9 @@
                                     <li>Selenium Wire</li>
                                 </ul>
                             </article>
-                        </li>
+                        </div>
 
-                        <li class="portfolio-item">
+                        <div class="portfolio-item swiper-slide">
                             <img src="assets/images/github-mark.png">
                             <article>
                                 <h3>Instagram Business Post Scraper</h3>
@@ -109,9 +123,9 @@
                                     <li>Selenium Wire</li>
                                 </ul>
                             </article>
-                        </li>
+                        </div>
 
-                        <li class="portfolio-item">
+                        <div class="portfolio-item swiper-slide">
                             <img src="assets/images/github-mark.png">
                             <article>
                                 <h3>Lorem ipsum dolor sit amet consectetur</h3>
@@ -127,15 +141,17 @@
                                     <li>Dolor</li>
                                 </ul>
                             </article>
-                        </li>
-                    </ul>
-                    <i id="right" class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
- 
     </section>
 
+    <!--Contact-->
     <section class="section" id="section-four">
         <div class="shadow">
             <div class="contactme-container">
@@ -146,6 +162,7 @@
         </div>
     </section>
 
+    <!--Footer-->
     <section class="section" id="section-five">
         <div class="shadow">
             <div class="footer-container">
