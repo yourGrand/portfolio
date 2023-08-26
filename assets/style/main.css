@@ -95,7 +95,7 @@ section {
 }
 
 #section-one {
-	background: url('/assets/images/version3.jpg') center/cover no-repeat;
+	background: url('../images/version3.jpg') center/cover no-repeat;
 }
 
 #section-one .shadow {
@@ -108,12 +108,12 @@ section {
 }
 
 #section-three {
-	background: url('/assets/images/version8.jpg') center/cover no-repeat;
+	background: url('../images/version8.jpg') center/cover no-repeat;
 	overflow: hidden;
 }
 
 #section-five{
-	background: url('/assets/images/version4.jpg') bottom/cover no-repeat;
+	background: url('../images/version4.jpg') bottom/cover no-repeat;
 }
 
 /* Navigation Bar */
@@ -386,7 +386,7 @@ header {
 }
 
 .portfolio-item h3 {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 }
 
@@ -394,7 +394,8 @@ header {
 	min-height: 120px;
 	max-height: 120px;
 	overflow: auto;
-	flex: 1
+	flex: 1;
+	font-size: 16px;
 }
 
 .portfolio-item ul {
