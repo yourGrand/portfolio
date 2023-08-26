@@ -380,8 +380,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	max-height: 470px;
-	min-height: 470px;
+	max-height: 480px;
+	min-height: 480px;
 	text-align: center;
 }
 
