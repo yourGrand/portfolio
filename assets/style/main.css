@@ -380,8 +380,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	max-height: 508px;
-	min-height: 508px;
+	max-height: 470px;
+	min-height: 470px;
 	text-align: center;
 }
 
@@ -406,7 +406,6 @@ header {
 	min-height: 40px;
 	overflow: auto;
 	margin-top: auto;
-	margin-bottom: 20px;
 }
 
 .portfolio-item ul li {
