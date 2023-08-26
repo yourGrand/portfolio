@@ -369,7 +369,7 @@ header {
 }
 
 .portfolio-title h2 {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 600;
 }
 
@@ -380,8 +380,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	max-height: 550px;
-	min-height: 550px;
+	max-height: 508px;
+	min-height: 508px;
 	text-align: center;
 }
 
@@ -391,8 +391,8 @@ header {
 }
 
 .portfolio-item article p {
-	min-height: 120px;
-	max-height: 120px;
+	min-height: 78px;
+	max-height: 78px;
 	overflow: auto;
 	flex: 1;
 	font-size: 16px;
