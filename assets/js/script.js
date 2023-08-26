@@ -171,14 +171,16 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.addEventListener("scroll", updateButtonVisibility);*/
 
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        //direction: 'vertical',
-        //loop: true,
-      
+        slidesPerView: 1,
+        spaceBetween: 40,
+        centerSlide: "true",
+        grabCursor: "true",
+        fade: "true",
+
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
-            
+            dynamicBullets: true
         },
       
         // Navigation arrows
@@ -186,11 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-      
-        // And if we need scrollbar
-        //scrollbar: {
-        //  el: '.swiper-scrollbar',
-        //},
     });
       
 
