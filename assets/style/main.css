@@ -25,7 +25,6 @@
 	--gradient: linear-gradient(90deg, rgba(83,127,255,1) 13%, rgba(255,0,236,1) 100%);
 	--navbarHeight: 56.5px;
 	--boxShadow: 0 5px 20px 0 var(--shadowColour3);
-	--boxShadowLight: 0 5px 20px 0 var(--shadowColour1); 
 }
 
 html {
@@ -73,12 +72,13 @@ article p {
 }
 
 section {
-	scroll-margin-top: var(--navbarHeight)
+	scroll-margin-top: var(--navbarHeight);
 }
 
 .shadow {
 	box-shadow: var(--boxShadow);
-	height: 100vh;
+	height: 100dvh;
+	transition: min-height 0.2s ease-in-out;
 }
 
 .section-darkness {
@@ -108,19 +108,21 @@ section {
 	100%{background-position:left}
 }
 
-button {
+button,
+.button {
 	background-color: var(--white);
 	color: var(--textColourH);
 	padding: 17px 20px;
 	border: none;
 	font-size: 20px;
 	border-radius: 100px;
-	box-shadow: var(--boxShadowLight);
+	box-shadow: var(--boxShadow);
 	transition: transform 0.4s ease-in-out;
 }
   
 /* animations */
-button:hover {
+button:hover,
+.button:hover {
 	background-image: linear-gradient(90deg, rgba(83,127,255,1) 13%, rgba(255,0,236,1) 100%);
 	background-size: 200% 200%;
 	animation: rainbow 2s ease-in-out infinite;
@@ -128,16 +130,21 @@ button:hover {
 	transform: scale(1.1);
 }
 
-button:hover a {
+button:hover a, 
+.button:hover a {
 	color: var(--white);
 }
 
-button:active {
+button:active, 
+.button:active {
 	transform: scale(1);
 }
 
 #section-one {
-	background: url('../images/version3.jpg') center/cover no-repeat;
+	background-image: url('../images/version3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
 }
 
 #section-one .shadow {
@@ -150,12 +157,11 @@ button:active {
 }
 
 #section-three {
-	background: url('../images/version8.jpg') center/cover no-repeat;
+	background-image: url('../images/version8.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 	overflow: hidden;
-}
-
-#section-five{
-	background: url('../images/version4.jpg') bottom/cover no-repeat;
 }
 
 /* Navigation Bar */
@@ -411,6 +417,15 @@ header {
 }
 
 /* Portfolio */
+#title,
+#page-footer {
+	height: 20%;
+}
+
+#main {
+	height: 60%;
+}
+
 .slider-container{
 	position: relative;
 }
@@ -422,8 +437,14 @@ header {
 	align-content: center;
 }
 
-.swiper{
-	position: unset;
+.swiper {
+	height: 100%;
+}
+
+.swiper-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
 }
 
 .portfolio-wrapper {
@@ -435,12 +456,13 @@ header {
 	background-color: var(--white);
 	border-radius: 50px;
 	box-shadow: var(--boxShadow);
-	margin: 25px auto;
+	margin: 0px auto;
+	margin-block: 2em;
 	padding: 15px 30px;
 }
 
 .portfolio-title h2 {
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: 600;
 }
 
@@ -451,9 +473,12 @@ header {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	max-height: 480px;
-	min-height: 480px;
 	text-align: center;
+}
+
+.portfolio-item article {
+	height: calc(100% / 3);
+	margin-bottom: 10px;
 }
 
 .portfolio-item h3 {
@@ -461,19 +486,28 @@ header {
 	font-weight: 500;
 }
 
+.p-container {
+	height: 100%;
+}
+
 .portfolio-item article p {
-	min-height: 78px;
-	max-height: 78px;
 	flex: 1;
 	font-size: 16px;
+	margin-bottom: 0px;
 }
 
 .portfolio-item ul {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	max-height: 120px;
-	min-height: 40px;
+	margin-top: auto;
+	padding-bottom: inherit;
+}
+
+.tags-container {
+	display: grid;
+	align-content: center;
+	height: calc(100% / 3);
 }
 
 .fade-overflow {
@@ -501,9 +535,12 @@ header {
 	font-weight: 500;
 }
 
-.portfolio-item i {
-	font-size: 100px;
-	padding-bottom: 20px;
+.symbol-container {
+	height: calc(100% / 3);
+	margin-bottom: 20px;
+}
+
+.symbol-container i {
 	color: var(--textColourH);
 }
 
@@ -558,7 +595,7 @@ header {
 }
 
 .portfolio-bg-credit {
-	margin: 80px auto auto;
+	text-align: center;
 	color: var(--highlightBg);
 }
 
@@ -604,8 +641,12 @@ header {
 	border: none;
 	background-color: var(--white);
 	border-radius: 20px;
-	box-shadow: var(--boxShadowLight);
-	-webkit-box-shadow: var(--boxShadowLight)
+	box-shadow: var(--boxShadow);
+}
+
+.contact-form input[type = email]::placeholder,
+.contact-form textarea::placeholder {
+	font-size: 18px;
 }
 
 .contact-form textarea {
@@ -617,8 +658,7 @@ header {
 	border-radius: 20px;
 	background-color: var(--white);
 	height: 200px;
-	box-shadow: var(--boxShadowLight);
-	-webkit-box-shadow: var(--boxShadowLight);
+	box-shadow: var(--boxShadow);
 }
 
 .contact-submit {

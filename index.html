@@ -12,8 +12,8 @@
     <script src="https://kit.fontawesome.com/c8d738133f.js" crossorigin="anonymous"></script>
 
      <!--Style and JS-->
-     <link rel="stylesheet" type="text/css" href="assets/style/main.css">
-     <link id="theme-style" rel="stylesheet" type="text/css" href="">
+     <link rel="stylesheet" href="assets/style/main.css">
+     <link id="theme-style" rel="stylesheet" href="">
      <script src="assets/js/script.js"></script>
 </head>
 
@@ -69,7 +69,7 @@
                             Let's explore together!
                         </p>
                     </article>
-                    <button class="about-button"><a href="#section-four">Get in touch!</a></button>
+                    <a class="button about-button" href="#section-four">Get in touch!</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
             <div class="shadow">
 
                 <!--Title-->
-                <div class="portfolio-container"> 
+                <div id="title" class="portfolio-container">
                     <div class="portfolio-wrapper"> 
                         <div class="portfolio-title">
                             <h2>Portfolio</h2>
@@ -90,50 +90,60 @@
                 </div>
 
                 <!--Swiper-->
-                <div class="slider-container">
+                <div id="main" class="slider-container">
                     <div class="portfolio-container swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide portfolio-item">
-                                <i class="fa-brands fa-github gradient-text"></i>
-                                <article>
+                                <div class="symbol-container">
+                                    <i class="fa-brands fa-github gradient-text dynamic-symbol"></i>
+                                </div>
+                                <article class="fade-overflow">
                                     <h3>Instagram Business Post Scraper</h3>
-                                    <p class="fade-overflow">
+                                    <p>
                                         Python script designed to scrape Instagram posts by targeting 
                                         posts from business accounts within a user-defined category, 
                                         all within the scope of a user-defined hashtag.
                                         <a href="https://github.com/yourGrand/instagram-post-scraper" target="_blank">Read more</a>
                                     </p>
                                 </article>
-                                <ul class="fade-overflow">
-                                    <li>Python</li>
-                                    <li>Selenium Webdriver</li>
-                                    <li>Selenium Wire</li>
-                                </ul>
+                                <div class="tags-container fade-overflow">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Selenium Webdriver</li>
+                                        <li>Selenium Wire</li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="swiper-slide portfolio-item">
-                                <i class="fa-brands fa-github gradient-text"></i>
-                                <article>
+                                <div class="symbol-container">
+                                    <i class="fa-brands fa-github gradient-text dynamic-symbol"></i>
+                                </div>
+                                <article class="fade-overflow">
                                     <h3>Instagram Business Post Scraper</h3>
-                                    <p class="fade-overflow">
+                                    <p>
                                         Python script designed to scrape Instagram posts by targeting 
                                         posts from business accounts within a user-defined category, 
-                                        all within the scope of a user-defined hashtag. 
+                                        all within the scope of a user-defined hashtag.
                                         <a href="https://github.com/yourGrand/instagram-post-scraper" target="_blank">Read more</a>
                                     </p>
                                 </article>
-                                <ul class="fade-overflow">
-                                    <li>Python</li>
-                                    <li>Selenium Webdriver</li>
-                                    <li>Selenium Wire</li>
-                                </ul>
+                                <div class="tags-container fade-overflow">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Selenium Webdriver</li>
+                                        <li>Selenium Wire</li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="swiper-slide portfolio-item">
-                                <i class="fa-brands fa-github gradient-text"></i>
-                                <article>
+                                <div class="symbol-container">
+                                    <i class="fa-brands fa-github gradient-text dynamic-symbol"></i>
+                                </div>
+                                <article class="fade-overflow">
                                     <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    <p class="fade-overflow">
+                                    <p>
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                         Dolorem labore quae eveniet voluptates, a dignissimos 
                                         reprehenderit autem officia. Repellat ullam fuga, nulla 
@@ -144,30 +154,32 @@
                                         debitis veniam dicta recusandae. Nostrum earum qui quisquam!
                                     </p>
                                 </article>
-                                <ul class="fade-overflow">
-                                    <li>Lorem Ipsum</li>
-                                    <li>Ipsum</li>
-                                    <li>Dolor Lorem Ipsum</li>
-                                    <li>Lorem Ipsum</li>
-                                    <li>Ipsum</li>
-                                    <li>Dolor Lorem Ipsum</li>
-                                    <li>Lorem Ipsum</li>
-                                    <li>Ipsum</li>
-                                    <li>Dolor Lorem Ipsum</li>
-                                    <li>Lorem Ipsum</li>
-                                    <li>Ipsum</li>
-                                    <li>Dolor Lorem Ipsum</li>
-                                </ul>
+                                <div class="tags-container fade-overflow">
+                                    <ul>
+                                        <li>Lorem Ipsum</li>
+                                        <li>Ipsum</li>
+                                        <li>Dolor Lorem Ipsum</li>
+                                        <li>Lorem Ipsum</li>
+                                        <li>Ipsum</li>
+                                        <li>Dolor Lorem Ipsum</li>
+                                        <li>Lorem Ipsum</li>
+                                        <li>Ipsum</li>
+                                        <li>Dolor Lorem Ipsum</li>
+                                        <li>Lorem Ipsum</li>
+                                        <li>Ipsum</li>
+                                        <li>Dolor Lorem Ipsum</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div id="right" class="swiper-button-next swiper-navBtn"></div>
-                        <div id="left" class="swiper-button-prev swiper-navBtn"></div>
-                        <div class="swiper-pagination"></div>
                     </div>
+                    <div id="right" class="swiper-button-next swiper-navBtn"></div>
+                    <div id="left" class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
 
                 <!--Credit-->
-                <div class="portfolio-container">
+                <div id="page-footer" class="portfolio-container">
                     <a class="portfolio-bg-credit" href="http://www.freepik.com" target="_blank">
                         Designed by kjpargeter / Freepik
                     </a>

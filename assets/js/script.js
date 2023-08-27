@@ -31,6 +31,14 @@ function setClasses(el) {
     }
 }
 
+// Function to update the font sizes of dynamically sized symbols based on its parent container heights.
+function updateFontSizes(symbols, containers) {
+    Array.from(symbols).forEach((symbol, index) => {
+        const containerHeight = containers[index].clientHeight;
+        symbol.style.fontSize = `${containerHeight}px`;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // SwiperJs initialization
     const swiper = new Swiper('.swiper', {
@@ -64,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set initial classes for each overflowing element
         setClasses(element);
     });
+
+    // Dynamic font-awesome symbol
+    const dynamicSymbols = document.querySelectorAll('.dynamic-symbol');
+    const symbolContainers = document.querySelectorAll('.symbol-container');
+
+    updateFontSizes(dynamicSymbols, symbolContainers);
+    window.addEventListener('resize', updateFontSizes); // Update font sizes on parent's height change
 
     // Navigation bar
     const hamburger = document.getElementById('hamburger');
