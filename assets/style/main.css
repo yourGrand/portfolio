@@ -77,8 +77,8 @@ section {
 
 .shadow {
 	box-shadow: var(--boxShadow);
-	height: 100dvh;
-	transition: min-height 0.2s ease-in-out;
+	min-height: 100dvh;
+	transition: min-height 0.2s ease;
 }
 
 .section-darkness {
@@ -417,13 +417,16 @@ header {
 }
 
 /* Portfolio */
-#title,
-#page-footer {
+#title {
 	height: 20%;
 }
 
+#page-footer {
+	height: 10%;
+}
+
 #main {
-	height: 60%;
+	height: 70%;
 }
 
 .slider-container{
@@ -580,7 +583,7 @@ header {
 .swiper-pagination-custom, 
 .swiper-horizontal > .swiper-pagination-bullets, 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-	bottom: -30px;
+	bottom: -25px;
 }
 
 .swiper-pagination-bullet {
