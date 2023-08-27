@@ -72,6 +72,10 @@ article p {
 	margin-inline-end: 0;
 }
 
+section {
+	scroll-margin-top: var(--navbarHeight)
+}
+
 .shadow {
 	box-shadow: var(--boxShadow);
 	height: 100vh;
