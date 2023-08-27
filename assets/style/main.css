@@ -93,10 +93,7 @@ section {
 }
 
 #section-one {
-    background-image: url('../images/version3.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+    background: url('../images/version3.jpg') center/cover no-repeat;
 }
 
 #section-one .shadow {
@@ -109,10 +106,7 @@ section {
 }
 
 #section-three {
-    background-image: url('../images/version8.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background: url('../images/version8.jpg') center/cover no-repeat;
     overflow: hidden;
 }
 
