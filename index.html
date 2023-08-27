@@ -23,7 +23,7 @@
     <header>
         <div class="nav-wrapper">
             <div class="logo-hamburger">
-                <a class="logo" href="index.html">AV</a>
+                <a class="logo gradient-text" href="index.html">AV</a>
                 <div id="hamburger">
                     <span></span>
                     <span></span>
@@ -33,9 +33,9 @@
             </div>
 
             <nav class="menu">
-                <a class="menu-link" href="#section-two">About</a>
-                <a class="menu-link" href="#section-three">Portfolio</a>
-                <a class="menu-link" href="#section-four">Contact</a>
+                <a class="menu-link gradient-text" href="#section-two">About</a>
+                <a class="menu-link gradient-text" href="#section-three">Portfolio</a>
+                <a class="menu-link gradient-text" href="#section-four">Contact</a>
             </nav>
         </div>
     </header>
@@ -60,15 +60,16 @@
         <div class="shadow">
             <div class="about-container">
                 <div class="about-wrapper">
+                    <img src="assets/images/mypic.png" class="about-img" alt="portrait">
                     <article class="about">
                         <h2>About me</h2>
                         <p>
                             CS student at the University of Sheffield, diving into tech's 
-                            endless possibilities.<br>On a mission to craft lasting solutions. 
-                            <br>Let's explore together!
+                            endless possibilities.On a mission to craft lasting solutions. 
+                            Let's explore together!
                         </p>
                     </article>
-                    <img src="assets/images/mypic.png" width="400" class="welcome-img" alt="portrait">
+                    <button class="about-button"><a href="#section-four">Get in touch!</a></button>
                 </div>
             </div>
         </div>
@@ -93,16 +94,17 @@
                     <div class="portfolio-container swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide portfolio-item">
-                                <img src="assets/images/github-mark.png">
+                                <i class="fa-brands fa-github gradient-text"></i>
                                 <article>
                                     <h3>Instagram Business Post Scraper</h3>
-                                    <p>
+                                    <p class="fade-overflow">
                                         Python script designed to scrape Instagram posts by targeting 
                                         posts from business accounts within a user-defined category, 
                                         all within the scope of a user-defined hashtag.
+                                        <a href="https://github.com/yourGrand/instagram-post-scraper" target="_blank">Read more</a>
                                     </p>
                                 </article>
-                                <ul>
+                                <ul class="fade-overflow">
                                     <li>Python</li>
                                     <li>Selenium Webdriver</li>
                                     <li>Selenium Wire</li>
@@ -110,16 +112,17 @@
                             </div>
 
                             <div class="swiper-slide portfolio-item">
-                                <img src="assets/images/github-mark.png">
+                                <i class="fa-brands fa-github gradient-text"></i>
                                 <article>
                                     <h3>Instagram Business Post Scraper</h3>
-                                    <p>
+                                    <p class="fade-overflow">
                                         Python script designed to scrape Instagram posts by targeting 
                                         posts from business accounts within a user-defined category, 
-                                        all within the scope of a user-defined hashtag.
+                                        all within the scope of a user-defined hashtag. 
+                                        <a href="https://github.com/yourGrand/instagram-post-scraper" target="_blank">Read more</a>
                                     </p>
                                 </article>
-                                <ul>
+                                <ul class="fade-overflow">
                                     <li>Python</li>
                                     <li>Selenium Webdriver</li>
                                     <li>Selenium Wire</li>
@@ -127,10 +130,10 @@
                             </div>
 
                             <div class="swiper-slide portfolio-item">
-                                <img src="assets/images/github-mark.png">
+                                <i class="fa-brands fa-github gradient-text"></i>
                                 <article>
                                     <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    <p>
+                                    <p class="fade-overflow">
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                         Dolorem labore quae eveniet voluptates, a dignissimos 
                                         reprehenderit autem officia. Repellat ullam fuga, nulla 
@@ -141,19 +144,19 @@
                                         debitis veniam dicta recusandae. Nostrum earum qui quisquam!
                                     </p>
                                 </article>
-                                <ul>
-                                    <li>Lorem</li>
+                                <ul class="fade-overflow">
+                                    <li>Lorem Ipsum</li>
                                     <li>Ipsum</li>
-                                    <li>Dolor</li>
-                                    <li>Lorem</li>
+                                    <li>Dolor Lorem Ipsum</li>
+                                    <li>Lorem Ipsum</li>
                                     <li>Ipsum</li>
-                                    <li>Dolor</li>
-                                    <li>Lorem</li>
+                                    <li>Dolor Lorem Ipsum</li>
+                                    <li>Lorem Ipsum</li>
                                     <li>Ipsum</li>
-                                    <li>Dolor</li>
-                                    <li>Lorem</li>
+                                    <li>Dolor Lorem Ipsum</li>
+                                    <li>Lorem Ipsum</li>
                                     <li>Ipsum</li>
-                                    <li>Dolor</li>
+                                    <li>Dolor Lorem Ipsum</li>
                                 </ul>
                             </div>
                         </div>
@@ -162,6 +165,13 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+
+                <!--Credit-->
+                <div class="portfolio-container">
+                    <a class="portfolio-bg-credit" href="http://www.freepik.com">
+                        Designed by kjpargeter / Freepik
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -169,24 +179,42 @@
     <!--Contact-->
     <section class="section" id="section-four">
         <div class="shadow">
-            <div class="contactme-container">
-                <div class="contactme-wrapper">
-                    <h2>Contact me</h2>
+            <div class="contact-container">
+                <h2>Contact me</h2>
+                    <div class="contact-socials">
+                        <a href="https://github.com/yourGrand"><i class="fa-brands fa-github gradient-text"></i></a>
+                        <a href="https://linkedin.com/in/artem-vakhutinskiy-1b9414255"><i class="fa-brands fa-linkedin-in gradient-text"></i></a>
+                        <a href="https://t.me/artemvakhutinskiy"><i class="fa-brands fa-telegram gradient-text"></i></a>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="contact-email">
+                                <input aria-label="Email" type="email" id="email" name="email" placeholder="Email"><br>
+                            </div>
+
+                            <div class="contact-comment">
+                                <textarea aria-label="Comment" id="comment" name="comment" placeholder="Comment"></textarea>
+                            </div>
+
+                            <div class="contact-submit">
+                                <button aria-label="Submit" type="submit" name="submit" id="submit">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--Footer-->
+                    <div class="footer-container">
+                        <div class="footer-wrapper">
+                            <footer>
+                                <p>Location:<br>England, UK or remote</p>
+                                <p>&copy; Artem Vakhutinskiy, 2023</p>
+                            </footer>
+                        </div>
+                    </div> 
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!--Footer-->
-    <section class="section" id="section-five">
-        <div class="shadow">
-            <div class="footer-container">
-                <div class="footer-wrapper">
-                    <footer>
-
-                    </footer>
-                </div>
-            </div>
-        </div>
-    </section> 
-</body>
+        </section>
+    </body>
