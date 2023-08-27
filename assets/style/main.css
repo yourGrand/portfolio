@@ -592,7 +592,6 @@ header {
 	padding: 20px 0px;
 	display: flex;
 	flex-direction: column;
-	-webkit-appearance: none;
 }
 
 .contact-email {
@@ -606,6 +605,7 @@ header {
 	background-color: var(--white);
 	border-radius: 20px;
 	box-shadow: var(--boxShadowLight);
+	-webkit-box-shadow: var(--boxShadowLight)
 }
 
 .contact-form textarea {
@@ -618,6 +618,7 @@ header {
 	background-color: var(--white);
 	height: 200px;
 	box-shadow: var(--boxShadowLight);
+	-webkit-box-shadow: var(--boxShadowLight);
 }
 
 .contact-submit {
