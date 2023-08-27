@@ -592,6 +592,7 @@ header {
 	padding: 20px 0px;
 	display: flex;
 	flex-direction: column;
+	-webkit-appearance: none;
 }
 
 .contact-email {
