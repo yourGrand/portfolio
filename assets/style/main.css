@@ -650,6 +650,7 @@ header {
     border: none;
     background-color: var(--white);
     border-radius: 20px;
+    font-size: 18px;
     box-shadow: var(--boxShadow);
 }
 
@@ -664,6 +665,7 @@ header {
     overflow: auto;
     resize: none;
     border: none;
+    font-size: 18px;
     border-radius: 20px;
     background-color: var(--white);
     height: 200px;
