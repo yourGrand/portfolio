@@ -74,7 +74,7 @@ article p {
 
 .shadow {
 	box-shadow: var(--boxShadow);
-	height: calc(100dvh - var(--navbarHeight))
+	height: 100vh;
 }
 
 .section-darkness {
