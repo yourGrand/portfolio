@@ -29,10 +29,6 @@
     --edgeSectionHeight: 100vh;
 }
 
-html {
-    scroll-snap-type: y mandatory;
-}
-
 body {
     background-color: var(--white);
 }
@@ -75,7 +71,6 @@ article p {
 
 section {
     scroll-margin-top: calc(- var(--navbarHeight));
-    scroll-snap-align: start;
 }
 
 .shadow {
@@ -137,12 +132,14 @@ button,
     padding: 17px 20px;
     border: none;
     font-size: 20px;
+    font-weight: 600;
     border-radius: 100px;
     box-shadow: var(--boxShadow);
     transition: transform 0.4s ease-in-out;
 }
   
 /* animations */
+
 button:hover,
 .button:hover {
     background-image: linear-gradient(90deg, rgba(83,127,255,1) 13%, rgba(255,0,236,1) 100%);
@@ -163,6 +160,7 @@ button:active,
 }
 
 /* Navigation Bar */
+
 header {
     background: var(--white);
     height: var(--navbarHeight);
@@ -221,6 +219,7 @@ header {
 }
 
 /* Hamburger */
+
 #hamburger {
     width: 40px;
     height: 30px;
@@ -301,6 +300,7 @@ header {
 }
 
 /* Menu */
+
 .menu {
     width: 100%;
     background-color: var(--white);
@@ -371,20 +371,27 @@ header {
 }
 
 /* About section */
+
 .about-container {
     margin: 0 25px;
-    display: grid;
-    align-content: center;
+    height: 100%;
 }
 
 .about-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 .about {
+    width: 350px;
     padding-top: 30px;
+    margin: 0 auto;
+    height: calc((100% - var(--navbarHeight)) * 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about h2 {
@@ -396,26 +403,36 @@ header {
     text-align: center;
 }
 
+.about-img-container{
+    height: calc((100% - var(--navbarHeight)) * 0.4);
+}
+
 .about-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 0 0px 0;
-    width: 70%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-button-container {
+    height: calc((100% - var(--navbarHeight)) * 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .about-button{
     padding-right: 20px;
     padding-left: 20px;
-    margin: 20px auto 0 auto;
-}
-
-.about-button a {
+    margin: 20px auto;
     font-size: 20px;
-    color: var(--textColourH); 
+    color: var(--textColourH);
 }
 
 /* Portfolio */
+
 #title {
     height: calc((100% - var(--navbarHeight)) * 0.2);
 }
@@ -609,21 +626,32 @@ header {
 }
 
 /* Contact */
-.contact-container {
+
+.contact-form-container {
+    height: calc((100% - var(--navbarHeight)) * 0.6);
+    display: block;
     margin: 0 25px;
 }
 
-.contact-container h2 {
+.socials-container {
+    display: grid;
+    height: calc((100% - var(--navbarHeight)) * 0.2);
+    margin: 0 25px;
+}
+
+.socials-container h2 {
     font-size: 30px;
     font-weight: 600;
-    padding: 35px 0 10px 0;
     text-align: center;
+    align-self: center;
+    margin-top: 1em;
 }
 
 .contact-socials {
     display: flex;
     justify-content: center;
-    padding: 25px 0px;
+    align-self: end;
+    margin-bottom: 1em;
 }
 
 .contact-socials i {
@@ -638,14 +666,18 @@ header {
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 .contact-email {
     padding-bottom: 10px;
+    height: calc(100% * 0.2);
 }
 
 .contact-form input[type = email] {
     width: 100%;
+    height: 100%;
     padding: 17px;
     border: none;
     background-color: var(--white);
@@ -659,6 +691,10 @@ header {
     font-size: 18px;
 }
 
+.contact-comment {
+    height: calc(100% * 0.6);
+}
+
 .contact-form textarea {
     width: 100%;
     padding: 17px;
@@ -668,7 +704,7 @@ header {
     font-size: 18px;
     border-radius: 20px;
     background-color: var(--white);
-    height: 200px;
+    height: 100%;
     box-shadow: var(--boxShadow);
 }
 
@@ -678,12 +714,17 @@ header {
     justify-content: center;
 }
 
+.footer-container {
+    height: calc((100% - var(--navbarHeight)) * 0.2);
+    display: grid;
+    align-content: end;
+}
+
 footer {
-    padding-top: 20px;
-    padding-bottom: 10px;
     text-align: center;
 }
 
 footer p {
     color: var(--textColour);
+    padding-bottom: 1em;
 }
