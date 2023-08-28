@@ -76,8 +76,7 @@ section {
 .shadow {
     box-shadow: var(--boxShadow);
     height: var(--edgeSectionHeight);
-    min-height: var(--edgeSectionHeight);
-    transition: min-height 200ms ease;
+    transition: height 200ms ease;
     padding-top: var(--navbarHeight);
 }
 
