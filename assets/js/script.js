@@ -75,6 +75,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Animation on scroll
+    /*let isInViewport = function(elem) {
+        let distance = elem.getBoundingClientRect();
+        return (
+            distance.top >= 0 &&
+            distance.left >= 0 &&
+            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };*/
+
+    // Animation on scroll
+    let isInViewport = function(elem, percentageVisible = 25) {
+        let distance = elem.getBoundingClientRect();
+        let windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        let sectionTop = distance.top;
+        let sectionBottom = distance.bottom;
+
+        return (
+            sectionTop <= windowHeight * (1 - percentageVisible / 100) &&
+            sectionBottom >= windowHeight * (percentageVisible / 100)
+        );
+    };
+
+    const sections = document.querySelectorAll('section');
+
+    // Initial check on page load
+    sections.forEach(section => {
+        if (isInViewport(section)) {
+            section.classList.add('show-animate');
+        }
+    });
+
+    window.addEventListener('scroll', function(event) {
+        // add event on scroll
+        sections.forEach(section => {
+            //for each .thisisatest
+            if (isInViewport(section)) {
+                //if in Viewport
+                section.classList.add('show-animate');
+            }
+        });
+    }, false);
+
+    /*window.onscroll = () => {
+        sections.forEach(sec => {
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+
+            if ( top >= offset && top < offset + height ) {
+                sec.classList.add('show-animate');
+            }
+
+            else {
+                sec.classList.remove('show-animate');
+            }
+        });
+    }*/
+
     // Portfolio-items' p and ul
     const overflowingElements = document.querySelectorAll('.fade-overflow');
 
