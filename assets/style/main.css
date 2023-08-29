@@ -26,7 +26,7 @@
     --navbarHeight: 56.5px;
     --boxShadow: 0 5px 20px 0 var(--shadowColour3);
     --middleSectionHeight: calc(100svh + var(--navbarHeight));
-    --edgeSectionHeight: 100dvh;
+    --edgeSectionHeight: 100vh;
 }
 
 body {
@@ -76,7 +76,6 @@ section {
 .shadow {
     box-shadow: var(--boxShadow);
     height: var(--edgeSectionHeight);
-    transition: height 200ms ease;
     padding-top: var(--navbarHeight);
 }
 
@@ -302,6 +301,10 @@ header {
 
 /* Menu */
 
+.responsive-menu {
+    display: none;
+}
+
 .menu {
     width: 100%;
     background-color: var(--white);
@@ -386,10 +389,9 @@ header {
 }
 
 .about {
-    width: 350px;
+    width: 300px;
     padding-top: 30px;
     margin: 0 auto;
-    height: calc((100% - var(--navbarHeight)) * 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -408,6 +410,10 @@ header {
     height: calc((100% - var(--navbarHeight)) * 0.4);
 }
 
+.about-article-button-container {
+    height: calc((100% - var(--navbarHeight)) * 0.6);
+}
+
 .about-img {
     display: block;
     margin-left: auto;
@@ -419,15 +425,14 @@ header {
 }
 
 .about-button-container {
-    height: calc((100% - var(--navbarHeight)) * 0.2);
     display: flex;
     flex-direction: column;
 }
 
 .about-button{
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 20px auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 1em auto;
     font-size: 20px;
     color: var(--textColourH);
 }
@@ -728,4 +733,152 @@ footer {
 footer p {
     color: var(--textColour);
     padding-bottom: 1em;
+}
+
+/* Breakpoints */
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (min-width: 400px) {
+    .about {
+        width: 350px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+    .contact-form-container {
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    .portfolio-container {
+        width: 60%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .about {
+        width: 85%;
+    }
+
+    .about h2 {
+        padding-bottom: 10px;
+    }
+
+    .about-button {
+        font-size: 25px;
+    }
+
+    .portfolio-container {
+        width: 85%;
+    }
+
+    .portfolio-item article h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-item article p {
+        font-size: 18px;
+    }
+
+    .shadow {
+        height: unset;
+    }
+
+    #section-two .shadow {
+        padding: var(--navbarHeight) 0px;
+    }
+
+    #section-three .shadow {
+        height: 100vh;
+    }
+
+    #section-four .shadow {
+        height: 100vh;
+    }
+    
+    .about-container {
+        margin: 0 50px;
+    }
+    
+    .about-wrapper {
+        flex-direction: row;
+    }
+
+    .about-img-container {
+        height: unset;
+        width: 40%;
+    }
+
+    .about-article-button-container {
+        width: 50%;
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+    }
+
+    .portfolio-title h2 {
+        font-size: 40px;
+    }
+
+    .socials-container h2 {
+        font-size: 40px;
+    }
+
+    .contact-socials i {
+        font-size: 50px;
+    }
+    
+    .contact-email {
+        height: unset;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .logo-hamburger {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .responsive-menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu-link {
+        padding: 0 20px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+    
+    .about h2 {
+        font-size: 37px;
+    }
+
+    .about p {
+        font-size: 25px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .about-img-container {
+        width: 30%;
+    }
+    
+    .portfolio-container {
+        width: 85%;
+        height: 95%;
+    }
+
+    .contact-form-container {
+        width: 65%;
+    }
 }
