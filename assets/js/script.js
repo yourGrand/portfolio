@@ -119,22 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, false);
 
-    /*window.onscroll = () => {
-        sections.forEach(sec => {
-            let top = window.scrollY;
-            let offset = sec.offsetTop - 150;
-            let height = sec.offsetHeight;
-
-            if ( top >= offset && top < offset + height ) {
-                sec.classList.add('show-animate');
-            }
-
-            else {
-                sec.classList.remove('show-animate');
-            }
-        });
-    }*/
-
     // Portfolio-items' p and ul
     const overflowingElements = document.querySelectorAll('.fade-overflow');
 
