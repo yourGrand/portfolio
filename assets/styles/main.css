@@ -1,6 +1,11 @@
 /* Basic */
-
 @import url('https://v1.fontapi.ir/css/SFProDisplay:400;500;600;700');
+
+@keyframes rainbow { 
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+}
 
 * {
     padding: 0;
@@ -93,24 +98,6 @@ section.show-animate .animate {
     background-color: var(--white);
 }
 
-#section-one {
-    background: url('../images/version3.jpg') center/cover no-repeat;
-}
-
-#section-one .shadow {
-    display: grid;
-    align-items: center;
-}
-
-#section-three .shadow {
-    display: flex;
-    flex-direction: column;
-    }
-
-#section-three {
-    background: url('../images/version8.jpg') center/cover no-repeat;
-}
-
 .gradient-text {
     background: var(--gradient);
     background-size: 200% 200%;
@@ -122,12 +109,6 @@ section.show-animate .animate {
 
 .gradient-text:hover {
     color:rgba(0,0,0,0);
-}
-
-@keyframes rainbow { 
-    0%{background-position:left}
-    50%{background-position:right}
-    100%{background-position:left}
 }
 
 button,
@@ -144,7 +125,6 @@ button,
 }
   
 /* animations */
-
 button:hover,
 .button:hover {
     background-image: linear-gradient(90deg, rgba(83,127,255,1) 13%, rgba(255,0,236,1) 100%);
@@ -164,8 +144,25 @@ button:active,
     transform: scale(1);
 }
 
-/* Navigation Bar */
+#section-one {
+    background: url('../images/version3.jpg') center/cover no-repeat;
+}
 
+#section-one .shadow {
+    display: grid;
+    align-items: center;
+}
+
+#section-three .shadow {
+    display: flex;
+    flex-direction: column;
+    }
+
+#section-three {
+    background: url('../images/version8.jpg') center/cover no-repeat;
+}
+
+/* Navigation Bar */
 header {
     background: var(--white);
     height: var(--navbarHeight);
@@ -173,26 +170,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-/*nav {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-nav a {
-    text-align: center;
-    padding: 0 5px 0 5px;
-    color: var(--blue);
-    
-}
-
-.nav-wrapper {
-    display: inline-flex;
-    flex-direction: row;
-    align-content: center;
-
-}*/
 
 header {
     position: fixed;
@@ -223,8 +200,53 @@ header {
     text-align: left;
 }
 
-/* Hamburger */
+/* Menu */
+.responsive-menu {
+    display: none;
+}
 
+.menu {
+    width: 100%;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 25px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    width: auto;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease;
+    z-index: 120;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:first-child {
+    margin-top: 30px;
+}
+
+.menu a:last-child {
+    margin-bottom: 30px;
+}
+
+.menu-link {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 25px;
+    color: var(--textColourH);
+}
+
+.menu-link:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger */
 #hamburger {
     width: 40px;
     height: 30px;
@@ -304,56 +326,7 @@ header {
     left: 50%;
 }
 
-/* Menu */
-
-.responsive-menu {
-    display: none;
-}
-
-.menu {
-    width: 100%;
-    background-color: var(--white);
-    margin: 0;
-    display: -ms-grid;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 25px;
-    padding: 0;
-    list-style: none;
-    clear: both;
-    width: auto;
-    text-align: center;
-    height: 0px;
-    overflow: hidden;
-    transition: height .4s ease;
-    z-index: 120;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.menu a:first-child {
-    margin-top: 30px;
-}
-
-.menu a:last-child {
-    margin-bottom: 30px;
-}
-
-.menu-link {
-    width: 100%;
-    margin: 0;
-    padding: 10px 0;
-    font-size: 25px;
-    color: var(--textColourH);
-}
-
-.menu-link:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
 /* Greeting section */
-
 .greeting-container {
     width: 85%;
     margin: 0 auto;
@@ -443,7 +416,6 @@ header {
 }
 
 /* Portfolio */
-
 #title {
     height: calc((100% - var(--navbarHeight)) * 0.2);
 }
@@ -637,7 +609,6 @@ header {
 }
 
 /* Contact */
-
 .contact-wrapper {
     height: 100%;
 }
@@ -744,7 +715,6 @@ footer p {
 }
 
 /* Breakpoints */
-
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (min-width: 400px) {
     .about {
